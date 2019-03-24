@@ -1,26 +1,24 @@
-	function toggleRed() {
 
-		var timerId = setInterval(function() {
-		  	document.getElementById("red-circle").classList.toggle("opacity-red");
-		}, 250);
+window.onload = function() {
+
+	const btn = document.querySelectorAll('.same_class'); //get all btns
+
+	btn.forEach( (element) => { //for every btn adding event click
+		element.addEventListener('click', sameFunctional);
+	})
+
+	//one function for all btn
+	function sameFunctional() {
+		//поочередно расскоменть и посмотри что в кончоли выводит при клике 
+		//console.log(this);
+		//console.log(this.classList);
+		//console.log(this.classList[1]);
+		
+		let timerId = setInterval( () => 
+			this.classList.toggle(`opacity-${this.classList[1]}`), 255 );
+
 		setTimeout(function() {
 			clearInterval(timerId);
 		}, 1750);
 	}
-
-	function toggleYellow() {
-		var timerId = setInterval(function() {
-		  	document.getElementById("yellow-circle").classList.toggle("opacity-yellow");
-		}, 250);
-		setTimeout(function() {
-			clearInterval(timerId);
-		}, 1750);
-	}
-
-	function toggleGreen() {
-		var timerId = setInterval(function() {
-		  	document.getElementById("green-circle").classList.toggle("opacity-green");
-		}, 250);
-		setTimeout(function() {
-			clearInterval(timerId);
-		}, 1750);}
+}
