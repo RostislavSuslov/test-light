@@ -1,10 +1,37 @@
-	window.onload = function() {
-		const btn1 = document.querySelector('.red');
-		const btn2 = document.querySelector('.yellow');
-		const btn3 = document.querySelector('.green');
+function counterClick() {
+	let num =0
 
-		btn1.addEventListener('click', toggleRed);
-		
+	return {
+		addOne: function() {
+
+		}
+	}
+}
+
+
+const obj = {
+	name: 'Rostik',
+	surname: 'Suslov',
+}
+
+console.log(obj.name);
+
+
+	/*window.onload = function() { // показывает что html  прогрузился
+		var btn1 = document.querySelector('.red');
+		const btn2 = document.querySelector('.yellow');
+		let btn3 = document.querySelector('.green');
+
+		//btn1.addEventListener('click', toggleRed);
+
+		btn1.onclick = function() {
+			
+		}	
+
+
+		const text = 'not changes';
+
+		let text2 = 'text will change';
 
 	}
 
