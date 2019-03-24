@@ -8,7 +8,6 @@
 		}, 1750);
 	}
 
-
 	function toggleYellow() {
 		var timerId = setInterval(function() {
 		  	document.getElementById("yellow-circle").classList.toggle("opacity-yellow");
